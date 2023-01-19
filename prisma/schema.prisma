@@ -15,6 +15,9 @@ datasource db {
 // prisma/schema.prisma
 // code above unchanged
 
+// prisma/schema.prisma
+// code above unchanged
+
 model User {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
@@ -22,6 +25,7 @@ model User {
   email     String?  @unique
   image     String?
   role      Role     @default(USER)
+  bookmarks Link[]
 }
 
 enum Role {
@@ -38,4 +42,5 @@ model Link {
   url         String
   imageUrl    String
   category    String
+  users      User[]
 }
