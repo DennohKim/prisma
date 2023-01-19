@@ -10,16 +10,14 @@ builder.prismaObject('Link', {
     imageUrl: t.exposeString('imageUrl'),
     category: t.exposeString('category'),
     users: t.relation('users')
-  })
+  }),
 })
 
-// 1. 
-builder.queryField("links", (t) =>
-// 2. 
-  t.prismaField({
-    // 3. 
-    type: ['Link'],
-    // 4. 
+
+builder.queryField('links', (t) =>
+  t.prismaConnection({
+    type: 'Link',
+    cursor: 'id',
     resolve: (query, _parent, _args, _ctx, _info) =>
       prisma.link.findMany({ ...query })
   })
