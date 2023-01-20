@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.4",
+    "@auth0/nextjs-auth0": "^2.1.0",
     "@pothos/core": "^3.24.0",
     "@pothos/plugin-prisma": "^3.40.1",
     "@pothos/plugin-relay": "^3.33.0",
@@ -17,7 +18,9 @@
     "graphql-yoga": "^3.3.0",
     "next": "^12.0.7",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-hook-form": "^7.42.1",
+    "react-hot-toast": "^2.4.0"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.4.0",

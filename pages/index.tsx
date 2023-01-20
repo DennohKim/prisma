@@ -52,6 +52,7 @@ export default function Home() {
               id={node.id}
               description={node.description}
               imageUrl={node.imageUrl}
+              key={node.id}
             />
           ))}
         </div>

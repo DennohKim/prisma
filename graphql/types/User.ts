@@ -12,4 +12,6 @@ builder.prismaObject('User', {
 
 const Role = builder.enumType('Role', {
   values: ['USER', 'ADMIN'] as const,
-})
+});
+
+
